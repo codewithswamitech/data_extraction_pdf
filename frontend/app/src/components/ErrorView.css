@@ -1,0 +1,195 @@
+/* ===== Error View Styles ===== */
+
+.error-page {
+    min-height: 100vh;
+    background: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header */
+.error-header {
+    width: 100%;
+    padding: var(--space-4) var(--space-6);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    justify-content: center;
+}
+
+.error-header-icon {
+    color: var(--color-primary);
+}
+
+.error-header-title {
+    font-size: var(--text-md);
+    font-weight: var(--weight-semibold);
+    color: var(--color-primary);
+}
+
+/* Red top bar */
+.error-top-bar {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-error), #F87171, var(--color-error));
+}
+
+/* Background decoration */
+.error-bg-doc {
+    position: fixed;
+    bottom: -40px;
+    right: -40px;
+    width: 200px;
+    height: 260px;
+    background: linear-gradient(135deg, #FEE2E2 0%, #FED7AA 100%);
+    border-radius: var(--radius-lg);
+    transform: rotate(-12deg);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Container */
+.error-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-8) var(--space-6);
+    width: 100%;
+    max-width: 600px;
+}
+
+.error-card {
+    width: 100%;
+    padding: var(--space-8);
+    text-align: center;
+}
+
+/* Error icon */
+.error-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-full);
+    background: var(--color-error-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-5);
+    color: var(--color-error);
+}
+
+.error-title {
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-bold);
+    color: var(--color-text);
+    margin-bottom: var(--space-3);
+}
+
+.error-code-badge {
+    margin-bottom: var(--space-5);
+}
+
+.error-code-badge code {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    background: var(--color-surface-alt);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+}
+
+/* Error message */
+.error-message-box {
+    background: var(--color-error-light);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+    margin-bottom: var(--space-6);
+    text-align: left;
+}
+
+.error-message-box p {
+    font-size: var(--text-base);
+    color: #7F1D1D;
+    line-height: var(--leading-relaxed);
+}
+
+/* Troubleshooting */
+.error-tips {
+    text-align: left;
+    margin-bottom: var(--space-6);
+}
+
+.tips-title {
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    color: var(--color-warning);
+    margin-bottom: var(--space-4);
+}
+
+.tips-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.tip-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    line-height: var(--leading-relaxed);
+}
+
+.tip-check {
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.error-divider {
+    width: 100%;
+    height: 1px;
+    background: var(--color-border);
+    margin-bottom: var(--space-6);
+}
+
+/* Actions */
+.error-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+}
+
+.error-support {
+    margin-top: var(--space-6);
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+}
+
+.error-support a {
+    color: var(--color-primary);
+    font-weight: var(--weight-medium);
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .error-card {
+        padding: var(--space-5);
+    }
+
+    .error-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .error-title {
+        font-size: var(--text-xl);
+    }
+}
